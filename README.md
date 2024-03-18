@@ -29,6 +29,7 @@
 
 ## Table of Contents:
 
+
 * [Pre-requisites](#pre-requisites)
 * [Getting Started With Github App Integration with SmartUI](#getting-started-with-github-app-integration-with-smartui)
 
