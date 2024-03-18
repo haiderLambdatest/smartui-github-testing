@@ -18,6 +18,7 @@
 </p>
 &emsp;
 &emsp;
+
 &emsp;
 
 *Learn the how to get started with testing GitHub app integration with SmartUI on the LambdaTest platform.*
