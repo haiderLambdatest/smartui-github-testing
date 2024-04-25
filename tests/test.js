@@ -4,18 +4,19 @@ var moment = require("moment");
 var waitTime = 2 // 2 seconds
 
 // username: Username can be found at automation dashboard
-const USERNAME = process.env.LT_USERNAME || "haiderk";
+// const USERNAME = process.env.LT_USERNAME || "haiderk";
 
 // AccessKey:  AccessKey can be generated from automation dashboard or profile section
-const KEY = process.env.LT_ACCESS_KEY || "i7vF5r66IYgsgE9Hp5t6hZqd5PkQX021FgpWRC70mp0ShbFh1R";
+// const KEY = process.env.LT_ACCESS_KEY || "i7vF5r66IYgsgE9Hp5t6hZqd5PkQX021FgpWRC70mp0ShbFh1R";
 
 // gridUrl: gridUrl can be found at automation dashboard
-const GRID_HOST =
-process.env.GRID_HOST || "@hub.lambdatest.com/wd/hub";    //connect to lambdatest hub
+// const GRID_HOST =
+// process.env.GRID_HOST || "@stage-hub.lambdatest.com/wd/hub";    //connect to lambdatest hub
 
 // const GRID_URL = process.env.GRID_URL || "GRID_URL";
 
 const GRID_URL = "https://haiderk:V2mDZgIXHVEFxPfVu3cODSDpe9cZ4MT2Z1ZkDbp5uMJ8XL0nxh@stage-hub.lambdatestinternal.com/wd/hub" 
+
 async function searchTextOnGoogle() {
   var keys = process.argv;
   console.log(keys);
