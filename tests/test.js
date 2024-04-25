@@ -13,8 +13,9 @@ const KEY = process.env.LT_ACCESS_KEY || "i7vF5r66IYgsgE9Hp5t6hZqd5PkQX021FgpWRC
 const GRID_HOST =
 process.env.GRID_HOST || "@hub.lambdatest.com/wd/hub";    //connect to lambdatest hub
 
-const GRID_URL = process.env.GRID_URL || "GRID_URL";
+// const GRID_URL = process.env.GRID_URL || "GRID_URL";
 
+const GRID_URL = "https://haiderk:V2mDZgIXHVEFxPfVu3cODSDpe9cZ4MT2Z1ZkDbp5uMJ8XL0nxh@stage-hub.lambdatestinternal.com/wd/hub" 
 async function searchTextOnGoogle() {
   var keys = process.argv;
   console.log(keys);
@@ -35,8 +36,8 @@ async function searchTextOnGoogle() {
     accessKey: KEY,
     name: "test session", // name of the test
     build: platform + browserName + version, // name of the build
-    "smartUI.build": "haider",
-    "smartUI.project": "!@#$%^{}[]",
+    "smartUI.build": "[!@#$%^{}[]]",
+    "smartUI.project": "[!@#$%^{}[]",
     github: {
       url: process.env.GITHUB_URL,
     },
@@ -85,7 +86,7 @@ async function startTest(gridUrl, capabilities, name) {
       // For Smartui TakeScreenshot
       setTimeout(function () {
         console.log("taking screenshot ...")
-        driver.executeScript(`smartui.takeScreenshot,{"screenshotName":"!@#$%^{}[]"}`).then(out => {
+        driver.executeScript(`smartui.takeScreenshot,{"screenshotName":"[!@#$%^{}[]",}`).then(out => {
           console.log("RESPONSE :", out)
           return
         });
