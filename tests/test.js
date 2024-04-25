@@ -37,8 +37,8 @@ async function searchTextOnGoogle() {
     accessKey: KEY,
     name: "test session", // name of the test
     build: platform + browserName + version, // name of the build
-    "smartUI.build": "[!@#$%^{}[]<>?",
-    "smartUI.project": "[!@#$%^{}[1]-2",
+    "smartUI.project": "[!@#$%^{}[1]",
+    "smartUI.build": "[!@#$%^{}[]<>?-1",
     github: {
       url: process.env.GITHUB_URL,
     },
