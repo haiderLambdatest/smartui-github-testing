@@ -4,10 +4,10 @@ var moment = require("moment");
 var waitTime = 2 // 2 seconds
 
 // username: Username can be found at automation dashboard
-// const USERNAME = process.env.LT_USERNAME || "haiderk";
+const USERNAME = process.env.LT_USERNAME || "username";
 
 // AccessKey:  AccessKey can be generated from automation dashboard or profile section
-// const KEY = process.env.LT_ACCESS_KEY || "i7vF5r66IYgsgE9Hp5t6hZqd5PkQX021FgpWRC70mp0ShbFh1R";
+const KEY = process.env.LT_ACCESS_KEY || "accesskey";
 
 // gridUrl: gridUrl can be found at automation dashboard
 // const GRID_HOST =
@@ -87,7 +87,7 @@ async function startTest(gridUrl, capabilities, name) {
       // For Smartui TakeScreenshot
       setTimeout(function () {
         console.log("taking screenshot ...")
-        driver.executeScript(`smartui.takeScreenshot,{"screenshotName":"[!@#$%^{}[]",}`).then(out => {
+        driver.executeScript(`smartui.takeScreenshot,{"screenshotName":"[!@#$%^{}[2]",}`).then(out => {
           console.log("RESPONSE :", out)
           return
         });
