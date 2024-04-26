@@ -40,7 +40,7 @@ async function searchTextOnGoogle() {
     "selenium_version": "4.0.0",
     name: "test session", // name of the test
     build: platform + browserName + version, // name of the build
-    "smartUI.project": "ABC",
+    "smartUI.project": "[PR: 6208] Commit:",
     "smartUI.build": "[PR: 6208] Commit: ",
     github: {
       url: process.env.GITHUB_URL,
