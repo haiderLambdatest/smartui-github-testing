@@ -39,7 +39,7 @@ async function searchTextOnGoogle() {
     name: "test session", // name of the test
     build: platform + browserName + version, // name of the build
     "smartUI.project": "[!@#$%^{}[1]",
-    "smartUI.build": "[!@#$%^{}[]<>?-2",
+    "smartUI.build": "[!@#$%^{}[]<>?-3",
     github: {
       url: process.env.GITHUB_URL,
     },
@@ -89,8 +89,8 @@ async function startTest(gridUrl, capabilities, name) {
       setTimeout(function () {
         console.log("taking screenshot ....")
         // driver.executeScript(`smartui.takeScreenshot,{"screenshotName":"A-1",}`).then(out => {
-          // driver.executeScript(`smartui.takeScreenshot=S-1`).then(out => {
-          driver.executeScript(`smartui.takeFullPageScreenshot=S-1`).then(out => {
+          driver.executeScript(`smartui.takeScreenshot=[PR: 6208]`).then(out => {
+          // driver.executeScript(`smartui.takeFullPageScreenshot=S-1`).then(out => {
           console.log("RESPONSE :", out)
           return
         });
