@@ -25,7 +25,7 @@ async function searchTextOnGoogle() {
   let parallelCount = keys[2] || 1;
   let tunnel = keys[3] || false;
   let platform = keys[4] || "Windows 10";
-  let browserName = keys[5] || "firefox";
+  let browserName = keys[5] || "edge";
   let version = keys[6] || "latest";
 
   // Setup Input capabilities
