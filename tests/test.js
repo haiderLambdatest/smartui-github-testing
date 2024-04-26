@@ -56,7 +56,7 @@ async function searchTextOnGoogle() {
   console.log("GITHUB_REPOSITORY : ", process.env.GITHUB_REPOSITORY);
 
   console.log(capabilities);
-  console.log("Running " + parallelCount + " parallel tests ");
+  console.log("Running " + parallelCount + " parallel tests  ");
   let i = 1;
   for (i = 1; i <= parallelCount; i++) {
     startTest(gridUrl, capabilities, "Test " + i);
