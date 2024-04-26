@@ -25,7 +25,7 @@ async function searchTextOnGoogle() {
   let parallelCount = keys[2] || 1;
   let tunnel = keys[3] || false;
   let platform = keys[4] || "Windows 10";
-  let browserName = keys[5] || "chrome";
+  let browserName = keys[5] || "firefox";
   let version = keys[6] || "latest";
 
   // Setup Input capabilities
@@ -41,7 +41,7 @@ async function searchTextOnGoogle() {
     name: "test session", // name of the test
     build: platform + browserName + version, // name of the build
     "smartUI.project": "ABC",
-    "smartUI.build": "[PR: 6208] Commit: 8afca2baa70e8a5eaef40fee4858f02655d41482",
+    "smartUI.build": "[PR: 6208] Commit:",
     github: {
       url: process.env.GITHUB_URL,
     },
