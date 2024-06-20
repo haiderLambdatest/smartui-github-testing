@@ -4,16 +4,19 @@ var moment = require("moment");
 var waitTime = 2 // 2 seconds
 
 // username: Username can be found at automation dashboard
-const USERNAME = process.env.LT_USERNAME || "haiderk";
+// const USERNAME = process.env.LT_USERNAME || "haiderk";
 
-// AccessKey:  AccessKey can be generated from automation dashboard or profile section
-const KEY = process.env.LT_ACCESS_KEY || "i7vF5r66IYgsgE9Hp5t6hZqd5PkQX021FgpWRC70mp0ShbFh1R";
+// // AccessKey:  AccessKey can be generated from automation dashboard or profile section
+// const KEY = process.env.LT_ACCESS_KEY || "i7vF5r66IYgsgE9Hp5t6hZqd5PkQX021FgpWRC70mp0ShbFh1R";
+
 
 // gridUrl: gridUrl can be found at automation dashboard
-const GRID_HOST =
-process.env.GRID_HOST || "@hub.lambdatest.com/wd/hub";    //connect to lambdatest hub
+// const GRID_HOST =
+// process.env.GRID_HOST || "@hub.lambdatest.com/wd/hub";    //connect to lambdatest hub
 
-const GRID_URL = process.env.GRID_URL || "GRID_URL";
+// const GRID_URL = process.env.GRID_URL || "GRID_URL";
+// const GRID_URL = "https://haiderk:V2mDZgIXHVEFxPfVu3cODSDpe9cZ4MT2Z1ZkDbp5uMJ8XL0nxh@stage-hub.lambdatestinternal.com/wd/hub" 
+const GRID_URL = "https://haiderk:i7vF5r66IYgsgE9Hp5t6hZqd5PkQX021FgpWRC70mp0ShbFh1R@hub.lambdatest.com/wd/hub" 
 
 async function searchTextOnGoogle() {
   var keys = process.argv;
@@ -35,8 +38,8 @@ async function searchTextOnGoogle() {
     accessKey: KEY,
     name: "test session", // name of the test
     build: platform + browserName + version, // name of the build
-    "smartUI.build": "[PR: 6208] Commit: 8afca2baa70e8a5eaef40fee4858f02655d41482",
-    "smartUI.project": "github-integration-demo-1",
+    "smartUI.build": "Github-build",
+    "smartUI.project": "github-integration-testing",
     github: {
       url: process.env.GITHUB_URL,
     },
@@ -85,7 +88,9 @@ async function startTest(gridUrl, capabilities, name) {
       // For Smartui TakeScreenshot
       setTimeout(function () {
         console.log("taking screenshot ...")
-        driver.executeScript(`smartui.takeScreenshot,{"screenshotName":"sample-screenshot"}`).then(out => {
+        // driver.executeScript(`smartui.takeScreenshot,{"screenshotName":"sample-screenshot"}`).then(out => {
+          driver.executeScript(`smartui.takeScreenshot=S-1`).then(out => {
+        // driver.executeScript(`smartui.takeFullPageScreenshot=S-1`).then(out => {
           console.log("RESPONSE :", out)
           return
         });
