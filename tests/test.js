@@ -38,14 +38,14 @@ async function searchTextOnGoogle() {
     accessKey: KEY,
     name: "test session", // name of the test
     build: platform + browserName + version, // name of the build
-    "smartUI.build": "Github-build",
+    // "smartUI.build": "Github-build",
     "smartUI.project": "github-integration-testing-1",
     github: {
       url: process.env.GITHUB_URL,
     },
   };
   
-  
+
   if (tunnel === "true") {
     capabilities.tunnel = true;
   }
