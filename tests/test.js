@@ -47,7 +47,6 @@ async function searchTextOnGoogle() {
   
 
 
-  
   if (tunnel === "true") {
     capabilities.tunnel = true;
   }
